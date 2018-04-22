@@ -1,0 +1,6 @@
+This us the implementation of the HPP_model, using prime number mapping.
+This has 4 files.
+GasLattice.jl : is the main file, and contains the main function that outputs by default a heatmap.
+GasLatticePressure.jl : Computes the particles hitting the border at one time. And returning an array. This is the
+			Function used to produce the pressure plot. 
+mapping_functions.jl and pressure_functions.jl : Secondary functions. Read the comments here first.
