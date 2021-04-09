@@ -1,3 +1,12 @@
+module main_module
+export countt
+export collision
+export bordercollisions
+export hastop
+export hasleft
+export hasright
+export hasbot
+export mapzeroes
 
 function countt(x)	#Counting function, counts the number of particles in a cell be performing integer
 			#Division of it's number and the particle direction primes.
@@ -18,7 +27,7 @@ function collision(x)	#This function computes the result of a particle-particle 
     end
     if x%10==0 	 	#10=2 x 5
         return 21
-    if x%21==0		#21=7 x 3
+    elseif x%21==0		#21=7 x 3
         return 10
     else
         return x
@@ -116,4 +125,6 @@ function mapzeroes(A1,A2)	#This function maps the zeroes of an array into anothe
         end
     end
     return A2
+end
+
 end

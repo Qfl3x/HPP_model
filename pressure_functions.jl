@@ -19,7 +19,7 @@ function countcollisions(A)         #This function counts collisions, uses same 
         if x%85==0
             count+=1
         end
-        if x%133=0 
+        if x%133==0 
             count+=1
         end
     
@@ -35,7 +35,7 @@ function arraygenerator(n,dim)     #This function generates a Grid with a fixed 
         while A[randint]!=1
             randint=rand(1:lengthA)
         end
-        A[randint]=rand([2 3 4 5])
+        A[randint]=rand([2 3 5 7])
         
             
     end
