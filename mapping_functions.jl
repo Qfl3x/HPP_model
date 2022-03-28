@@ -1,12 +1,11 @@
-module main_module
-export countt
-export collision
-export bordercollisions
-export hastop
-export hasleft
-export hasright
-export hasbot
-export mapzeroes
+# export countt
+# export collision
+# export bordercollisions
+# export hastop
+# export hasleft
+# export hasright
+# export hasbot
+# export mapzeroes
 
 function countt(x)	#Counting function, counts the number of particles in a cell be performing integer
 			#Division of it's number and the particle direction primes.
@@ -99,16 +98,17 @@ function hasright(x)	#Right cell, 7 for incoming particle, 13 for border.
     end
 end
 function hasbot(x)	#Top cell, 5 for incoming particle, 11 for border.
-    X=x%5
-    ret=1
-    if x==0
-        return 11
-    end
-    if X==0
-        return ret*5
-    else
-        return 1
-    end
+    #X=x%5
+    return (1 + (x%5)==0 * 4 + x==0 * 10)
+    # return ret
+    # if x==0
+    #     return 11
+    # end
+    # if X==0
+    #     return ret*5
+    # else
+    #     return 1
+    # end
 end
 
 #=================================================================#
@@ -127,4 +127,3 @@ function mapzeroes(A1,A2)	#This function maps the zeroes of an array into anothe
     return A2
 end
 
-end
